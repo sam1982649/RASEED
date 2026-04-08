@@ -1,1 +1,321 @@
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحويل رصيد - Tahweel Raseed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .header .desc {
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        .version {
+            display: inline-block;
+            background: #4CAF50;
+            padding: 5px 20px;
+            border-radius: 30px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        
+        .feature-card p {
+            opacity: 0.8;
+            font-size: 0.95em;
+        }
+        
+        .units-section {
+            margin: 30px 0;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .unit-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .unit-btn:hover {
+            background: #4CAF50;
+            transform: scale(1.05);
+        }
+        
+        .tests-section {
+            background: rgba(76, 175, 80, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #4CAF50;
+        }
+        
+        .tests-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .screenshots {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .phone-mockup {
+            background: #111;
+            border-radius: 30px;
+            padding: 10px;
+            display: inline-block;
+            border: 3px solid #333;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+        
+        .emoji-big {
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- رأس الصفحة -->
+        <div class="header">
+            <div class="emoji-big">💰</div>
+            <h1>تحويل رصيد</h1>
+            <div class="subtitle">Tahweel Raseed</div>
+            <div class="desc">
+                تطبيق متكامل لإدارة التحويلات المالية عبر سيرياتيل كاش.<br>
+                مع نظام ديون، محفظة افتراضية، وفئات أسعار ديناميكية.
+            </div>
+            <span class="version">الإصدار 1.0 | للتجار في سوريا</span>
+        </div>
+        
+        <!-- شكل الواجهة -->
+        <div class="screenshots">
+            <h2 style="margin-bottom: 20px;">📱 شكل الواجهة</h2>
+            <div class="phone-mockup">
+                <div style="background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 20px; border-radius: 20px;">
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <div style="width: 80px; height: 160px; background: #2196F3; border-radius: 15px;"></div>
+                        <div style="width: 80px; height: 160px; background: #4CAF50; border-radius: 15px;"></div>
+                        <div style="width: 80px; height: 160px; background: #FF9800; border-radius: 15px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- الميزات الرئيسية -->
+        <div class="section-title">
+            <span>🔑</span> الميزات الرئيسية
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <h3>تحويل آلي</h3>
+                <p>إرسال أكواد USSD تلقائياً للتحويل عبر سيرياتيل كاش</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>دعم الشريحتين</h3>
+                <p>اختر SIM 1 أو SIM 2 للتحويل</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>محفظة افتراضية</h3>
+                <p>تتبع رصيدك مع تنبيهات عند الانخفاض</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>نظام ديون</h3>
+                <p>دفع نقدي أو آجل مع متابعة المستحقات</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏷️</div>
+                <h3>فئات الأسعار</h3>
+                <p>بحث تلقائي واقتراحات فورية</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>جهات الاتصال</h3>
+                <p>مزامنة واقتراح تلقائي للأسماء</p>
+            </div>
+        </div>
+        
+        <!-- الأقسام -->
+        <div class="units-section">
+            <div class="section-title">
+                <span>💰</span> عمليات التحويل
+            </div>
+            <div class="units-grid">
+                <div class="unit-btn">تحويل جديد</div>
+                <div class="unit-btn">استعلام رصيد</div>
+                <div class="unit-btn">إضافة رصيد</div>
+                <div class="unit-btn">سجل العمليات</div>
+                <div class="unit-btn">الديون</div>
+                <div class="unit-btn">فئات الأسعار</div>
+                <div class="unit-btn">الإعدادات</div>
+                <div class="unit-btn">تفعيل</div>
+            </div>
+        </div>
+        
+        <!-- قسم التحميل -->
+        <div class="tests-section">
+            <div style="font-size: 3em;">📱</div>
+            <h2>حمل التطبيق الآن</h2>
+            <p style="margin: 15px 0; opacity: 0.9;">متوفر بصيغة APK للتحميل المباشر</p>
+            <a href="#" class="download-btn">⬇️ تحميل APK</a>
+        </div>
+        
+        <!-- مميزات إضافية -->
+        <div style="margin: 30px 0;">
+            <div class="section-title">
+                <span>✨</span> مميزات إضافية
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                    <span>📖</span> دعم الأرقام العربية والإنجليزية
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                    <span>📋</span> سجل كامل للعمليات
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                    <span>💡</span> تنبيهات ذكية للرصيد
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                    <span>🔐</span> تشفير الرقم السري
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                    <span>🏪</span> مصمم للتجار والمحلات
+                </div>
+            </div>
+        </div>
+        
+        <!-- تذييل -->
+        <div class="footer">
+            <p>© 2024 تحويل رصيد - Tahweel Raseed</p>
+            <p style="margin-top: 10px;">📧 samershamel@gmail.com</p>
+        </div>
+        
+    </div>
+</body>
+  </html>
